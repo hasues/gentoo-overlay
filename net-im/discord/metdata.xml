@@ -1,0 +1,34 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+        <maintainer type="project">
+                <email>hasbiz@gmx.com</email>
+                <name>Discord Messenger</name>
+        </maintainer>
+        <longdescription>
+                Discord Gaming Messenger.
+                
+                This package installs Discord Messenger.  It allow
+                the installation of stable, public test build (ptb),
+                and alpha (canary) versions, managed by use flag.
+                
+                Note that since this does not track specific packages
+                and release numbers of Discord, it may be necessary
+                from time to time to clean all Discord software
+                in /usr/portage/distfiles and perform an:
+                ebuild {discord ebuild} digest
+                to update portage with newer versions of the software.
+                
+                This can be identified when Discord states an update
+                is available.
+                
+                Eventually, the canary dependencies will need to be
+                moved into the other versions of the release.
+                
+                Consult the @README@ for documentation:
+                &lt;https://github.com/hasues/gentoo-overlay#readme&gt;
+        </longdescription>
+        <upstream>
+                <remote-id type="github">zalora/aeson-qq</remote-id>
+        </upstream>
+</pkgmetadata>
