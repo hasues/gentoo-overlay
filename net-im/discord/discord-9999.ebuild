@@ -77,7 +77,7 @@ src_unpack() {
 }
 
 src_install() {
-echo $QA_PREBUILT
+
 	# Install the core Application.
 	dodir /opt/${PN}
 	insinto /opt/${PN}
@@ -95,11 +95,11 @@ echo $QA_PREBUILT
 	# Make sure to change the desktop file based on the version of the client.
 	if use ptb
 	then
-          sed -i.bak -e 's/\/usr\/share/\/opt/' ${QA_PREBUILT}/discord-ptb.desktop
+          sed -i.bak -e 's/\/usr\/share\/discord-ptb/\/opt\/discord/' ${QA_PREBUILT}/discord-ptb.desktop
           domenu ${QA_PREBUILT}/discord-ptb.desktop
         elif use canary
         then
-          sed -i.bak -e 's/\/usr\/share/\/opt/' ${QA_PREBUILT}/discord-canary.desktop
+          sed -i.bak -e 's/\/usr\/share\/discord-canary/\/opt\/discord/' ${QA_PREBUILT}/discord-canary.desktop
           domenu ${QA_PREBUILT}/discord-canary.desktop
         else
           sed -i.bak -e 's/\/usr\/share/\/opt/' ${QA_PREBUILT}/discord.desktop
